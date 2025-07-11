@@ -37,11 +37,15 @@ O objetivo central foi aplicar na prática os conceitos de GitOps, utilizando o 
 
 O fluxo de trabalho implementado segue o princípio fundamental do GitOps:
 
+
+```mermaid
 graph TD
-A(Desenvolvedora) -- 1. git push --> B(Repositório GitHub);
-B -- 2. Webhook / Pull --> C(ArgoCD);
-C -- 3. Sincronização --> D(Cluster Kubernetes);
-D -- 4. Roda a Aplicação --> E(Online Boutique);
+    A(Desenvolvedora) -- 1. git push --> B(Repositório GitHub);
+    B -- 2. Webhook / Pull --> C(ArgoCD);
+    C -- 3. Sincronização --> D(Cluster Kubernetes);
+    D -- 4. Roda a Aplicação --> E(Online Boutique);
+```
+
 
 Qualquer alteração no manifesto da aplicação que for enviada para a branch `main` deste repositório será automaticamente detetada e aplicada pelo ArgoCD ao cluster local.
 
