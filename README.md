@@ -4,8 +4,6 @@ Este projeto demonstra a implementação de um fluxo de GitOps para implantar, d
 
 -----
 
------
-
 ## Índice
 
   * [Descrição do Projeto](https://www.google.com/search?q=%23-descri%C3%A7%C3%A3o-do-projeto)
@@ -124,8 +122,6 @@ Após a criação da aplicação na interface do ArgoCD, ela foi automaticamente
 <p align="center"><img src="./imagens/new-app-argocd.png" width="600"/></p>
 <p align="center"><img src="./imagens/new-app-argocd1.png" width="600"/></p>
 <p align="center"><img src="./imagens/new-app-argocd2.png" width="600"/></p>
-<p align="center"><img src="./imagens/new-app-argocd3.png" width="600"/></p>
-<p align="center"><img src="./imagens/new-app-argocd4.png" width="600"/></p>
 <p align="center"><img src="./imagens/new-app-argocd-criado.png" width="600"/></p>
 <p align="center"><img src="./imagens/new-app-argocd-criado2.png" width="600"/></p>
 
@@ -135,16 +131,6 @@ Com todos os microsserviços a correr no cluster Kubernetes, o frontend da aplic
 
 <p align="center"><img src="./imagens/app-funcionando.png" width="600"/></p>
 
-
-### 3\. Validação do Fluxo GitOps: Escalando o Frontend
-
-O teste final consistiu em validar o ciclo completo do GitOps. O ficheiro `online-boutique.yaml` foi alterado, mudando o número de réplicas do `frontend` de 1 para 3. Após o `git push`, o ArgoCD detetou a alteração e automaticamente atualizou o estado no cluster.
-
-O terminal abaixo mostra o resultado do comando `kubectl get pods -l app=frontend`, servindo como prova de que a aplicação foi escalada com sucesso para **3 réplicas**, sem qualquer intervenção manual no cluster.
-
-<p align="center"><img src="./imagens/pods.png" width="600"/></p>
-
------
 
 ## Desafios e Soluções
 
