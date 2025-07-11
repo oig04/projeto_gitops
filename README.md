@@ -40,10 +40,10 @@ O fluxo de trabalho implementado segue o princípio fundamental do GitOps:
 
 ```mermaid
 graph TD
-    A(Desenvolvedora) -- 1. git push --> B(Repositório GitHub);
-    B -- 2. Webhook / Pull --> C(ArgoCD);
-    C -- 3. Sincronização --> D(Cluster Kubernetes);
-    D -- 4. Roda a Aplicação --> E(Online Boutique);
+    Desenvolvedor --> Repositorio_GitHub;
+    Repositorio_GitHub --> ArgoCD;
+    ArgoCD --> Cluster_Kubernetes;
+    Cluster_Kubernetes --> Aplicacao_Online;
 ```
 
 
